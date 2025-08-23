@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/o_service_layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/heading_margin_card"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/o_services_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@color/white"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <include-->
+    <!--        android:id="@+id/devider_below_o_service"-->
+    <!--        layout="@layout/view_divider"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="12dp"-->
+    <!--        android:layout_below="@+id/o_services_recyclerView"-->
+    <!--        android:layout_marginTop="10dp" />-->
+
+
+</RelativeLayout>
+

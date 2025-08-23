@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recomNewsParent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdNutraidxe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/heading_margin_card"
+        app:cardCornerRadius="11dp"
+        android:background="@color/white"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="@dimen/_250sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_recommended_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/heading_margin_top"
+                android:layout_marginBottom="@dimen/heading_margin_bottom"
+                android:text="Lifestyle"
+                android:textAllCaps="false"
+                android:textColor="@color/nubit_headingColor"
+                android:textSize="@dimen/nubit_heading_size"/>
+
+            <!--   <ImageButton
+                   android:id="@+id/topNews_spinner"
+                   style="?android:attr/actionOverflowButtonStyle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="@dimen/spinner_right_margin" />-->
+
+            <!--            <include-->
+            <!--                android:id="@+id/devider_below_recommended"-->
+            <!--                layout="@layout/view_divider"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="2dp"-->
+            <!--                android:layout_below="@+id/title_recommended_news"-->
+            <!--                android:layout_marginTop="10dp" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_recom_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_recommended_news"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/webviewVistoryCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                android:layout_below="@+id/title_recommended_news"
+                tools:ignore="WebViewLayout">
+            </WebView>
+
+            <LinearLayout
+                android:id="@+id/ll_no_internet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingTop="@dimen/_35sdp"
+                android:paddingBottom="@dimen/_120sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_60sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Try again!"
+                    android:textColor="@color/nubit_headingColor"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="No internet connection available"
+                    android:textColor="@color/nubit_headingColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!--    <include-->
+    <!--        android:id="@+id/devider_below_recom_news"-->
+    <!--        layout="@layout/view_divider"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="12dp"-->
+    <!--        android:layout_below="@+id/news_recom_recyclerView"-->
+    <!--        android:layout_marginTop="10dp" />-->
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+

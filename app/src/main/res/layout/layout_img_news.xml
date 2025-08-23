@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topNewsParent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="11dp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/heading_margin_card"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/btn_news_title_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/heading_margin_top"
+                android:layout_marginBottom="@dimen/heading_margin_bottom"
+                android:text="Sports News"
+                android:textAllCaps="false"
+                android:textColor="@color/nubit_headingColor"
+                android:textSize="@dimen/nubit_heading_size" />
+
+            <!--   <ImageButton
+                   android:id="@+id/topNews_spinner"
+                   style="?android:attr/actionOverflowButtonStyle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_alignParentTop="true"
+                   android:layout_centerVertical="true"
+                   android:layout_marginRight="@dimen/spinner_right_margin" />-->
+
+<!--            <include-->
+<!--                android:id="@+id/devider_below_new_ref"-->
+<!--                layout="@layout/view_divider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_below="@+id/btn_news_title"-->
+<!--                android:layout_marginTop="10dp" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/top_ImgNews_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_news_title_img"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:scrollbars="none" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/top_ImgNorNews_recyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_below="@+id/top_ImgNews_recyclerView"
+                android:layout_marginTop="2dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/btn_news5_seemore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/top_ImgNorNews_recyclerView"
+                android:layout_marginTop="3dp"
+                android:gravity="center_horizontal"
+                android:text="See more"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textAllCaps="false"
+                android:textColor="@color/nubit_headingColor"
+                android:textSize="14sp" />
+
+            <!--        <include-->
+            <!--            android:id="@+id/devider_below_topnews"-->
+            <!--            layout="@layout/view_divider"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="12dp"-->
+            <!--            android:layout_below="@+id/news_top_recyclerView"-->
+            <!--            android:layout_marginTop="10dp" />-->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+
+
+
+
+
+
+
