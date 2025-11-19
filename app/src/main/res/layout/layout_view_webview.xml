@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_gap"
+    app:cardCornerRadius="11dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        tools:ignore="WebViewLayout">
+
+        <TextView
+            android:id="@+id/tv_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/heading_margin_top"
+            android:layout_marginBottom="@dimen/heading_margin_bottom"
+            android:text="Frequently used Apps"
+            android:fontFamily="@font/font_bold"
+            android:textAllCaps="false"
+            android:textColor="@color/nubit_headingColor"
+            android:textSize="@dimen/nubit_heading_size" />
+
+        <WebView
+            android:id="@+id/webviewMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

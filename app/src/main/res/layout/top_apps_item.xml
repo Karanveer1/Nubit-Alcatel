@@ -1,0 +1,88 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topapps_cardview"
+    android:layout_width="@dimen/_70sdp"
+    android:layout_height="@dimen/_74sdp"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="0dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/topapps_items_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background">
+
+        <ImageView
+            android:id="@+id/topapps_icon"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/whatsapp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/txt_topapps_name"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/topapps_icon"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:background="@color/accentColor"
+            android:includeFontPadding="false"
+            android:text="Apps Title"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/_1sdp" />
+
+
+        <include
+            android:id="@+id/topApps_divider"
+            layout="@layout/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txt_topapps_name"
+            android:layout_marginTop="5dp" />
+
+
+        <Button
+            android:id="@+id/btn_install_topapps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topApps_divider"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/games_install_style"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:visibility="gone"
+            android:minHeight="0dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="3dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="3dp"
+            android:stateListAnimator="@null"
+            android:text="Install"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+<!--        <include-->
+<!--            android:id="@+id/layout_admob"-->
+<!--            layout="@layout/layout_admob"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

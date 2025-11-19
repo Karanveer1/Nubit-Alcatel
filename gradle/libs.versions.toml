@@ -15,6 +15,9 @@ cardview = "1.0.0"
 sdp = "1.1.0"
 exoplayer = "2.19.0"
 constraintlayout = "2.1.4"
+appcompat = "1.7.0"
+material = "1.10.0"
+activity = "1.8.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +48,11 @@ glide = { module = "com.github.bumptech.glide:glide", version = "4.15.1" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version = "4.15.1" }
 constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version = "0.5.0" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

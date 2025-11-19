@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cdCpuData"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_110sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_weight="1"
+    app:cardElevation="0dp"
+    android:layout_marginStart="@dimen/_4sdp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCleanRam"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:srcCompat="@drawable/cleaner" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAM"
+            android:textColor="@color/colorGrey"
+            android:textSize="14sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:fontFamily="@font/font_regular"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="@dimen/_5sdp"-->
+            <!--                        android:text="Occupied RAM"-->
+            <!--                        android:textColor="@color/colorGrey"-->
+            <!--                        android:textSize="12sp"-->
+            <!--                        app:layout_constraintStart_toStartOf="@id/tvEmissionInKg"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@id/textTotalCo2"-->
+            <!--                        app:layout_constraintVertical_chainStyle="spread" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalRAM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="256"
+                    android:textColor="@color/black"
+                    android:textSize="31sp"
+                    android:fontFamily="@font/font_regular"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" MB"
+                    android:fontFamily="@font/font_regular"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="14sp"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Consumed"
+                    android:textColor="@color/colorGreyA4"
+                    android:fontFamily="@font/font_regular"
+                    android:textSize="10sp"
+                    app:layout_constraintVertical_chainStyle="spread" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

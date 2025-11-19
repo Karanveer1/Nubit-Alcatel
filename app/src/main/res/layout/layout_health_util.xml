@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_gap"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdNutraide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="11dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/nutriaide_ref_layout"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_nutriaide_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/heading_margin_top"
+                    android:layout_marginBottom="@dimen/heading_margin_bottom"
+                    android:fontFamily="@font/font_bold"
+                    android:stateListAnimator="@null"
+                    android:text="Nutriaide health"
+                    android:textAllCaps="false"
+                    android:textColor="@color/nubit_headingColor"
+                    android:textSize="@dimen/nubit_heading_size"/>
+
+                <RelativeLayout
+                    android:id="@+id/ref_spin_containernutriaide"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/nutriaide_news_ref"
+                        android:layout_width="@dimen/ref_btn_size"
+                        android:layout_height="@dimen/ref_btn_size"
+                        android:padding="@dimen/ref_btn_padding"
+                        android:visibility="gone"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/read_more_margin"
+                        android:src="@drawable/refresh" />
+
+                </RelativeLayout>
+
+<!--                <include-->
+<!--                    android:id="@+id/devider_below_topapps_ref"-->
+<!--                    layout="@layout/view_divider"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:layout_below="@+id/btn_nutriaide_title"-->
+<!--                    android:layout_marginTop="20dp" />-->
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/mcvCalories"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:background="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="@dimen/_8sdp">
+
+                        <me.tankery.lib.circularseekbar.CircularSeekBar
+                            android:id="@+id/seekbarCalories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_120sdp"
+                            app:cs_circle_color="@color/colorMaroonLight"
+                            app:cs_circle_progress_color="@color/colorMaroon"
+                            app:cs_circle_stroke_width="7dp"
+                            app:cs_circle_style="square"
+                            app:cs_max="100"
+                            app:cs_move_outside_circle="true"
+                            app:cs_pointer_color="@color/colorMaroon"
+                            app:cs_pointer_halo_color="@color/white"
+                            app:cs_pointer_stroke_width="0dp"
+                            app:cs_progress="0"
+                            app:cs_disable_pointer="true"
+                            app:cs_start_angle="-90"
+                            app:layout_constraintHorizontal_bias=".3"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_centerInParent="true">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/_4sdp"
+                                    app:layout_constraintBottom_toBottomOf="@id/seekbarCalories"
+                                    app:layout_constraintEnd_toEndOf="@id/seekbarCalories"
+                                    app:layout_constraintStart_toStartOf="@id/seekbarCalories"
+                                    app:layout_constraintTop_toTopOf="@id/seekbarCalories"
+                                    app:srcCompat="@drawable/ic_hot_cyan"
+                                    app:tint="@color/colorMaroon" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCaloriesConsumed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="0"
+                                    android:textColor="@color/colorMaroon"
+                                    android:textSize="30sp"
+                                    app:layout_constraintBottom_toTopOf="@id/textTotalCalories"
+                                    app:layout_constraintVertical_chainStyle="spread" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textKcsl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="kcal"
+                                android:textColor="@color/colorMaroon"
+                                android:textSize="17sp"
+                                android:fontFamily="@font/roboto_regular"
+                                app:layout_constraintBaseline_toBaselineOf="@id/tvCaloriesConsumed"
+                                app:layout_constraintBottom_toTopOf="@id/textTotalCalories"
+                                app:layout_constraintStart_toEndOf="@id/tvCaloriesConsumed"
+                                app:layout_constraintVertical_chainStyle="spread" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textTotalCalories"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/2000 kcal"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/colorMaroonLight"
+                                android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="@id/seekbarCalories"
+                                app:layout_constraintStart_toStartOf="@id/tvCaloriesConsumed"
+                                app:layout_constraintTop_toBottomOf="@id/textKcsl"
+                                app:layout_constraintVertical_chainStyle="spread" />
+
+                            <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                android:id="@+id/textConsumed"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:text="@string/consumed"-->
+                            <!--                                android:textColor="@color/colorMaroon"-->
+                            <!--                                android:textSize="17sp"-->
+                            <!--                                app:layout_constraintBottom_toTopOf="@id/textKcsl"-->
+                            <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                                app:layout_constraintStart_toEndOf="@id/seekbarCalories"-->
+                            <!--                                app:layout_constraintTop_toTopOf="@id/seekbarCalories"-->
+                            <!--                                app:layout_constraintVertical_chainStyle="spread" />-->
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical">
+
+                        <me.tankery.lib.circularseekbar.CircularSeekBar
+                            android:id="@+id/seekbarSteps"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_90sdp"
+                            app:cs_circle_style="square"
+                            app:cs_pointer_stroke_width="0dp"
+                            app:cs_circle_color="@color/colorGreen2Light"
+                            app:cs_circle_progress_color="@color/colorGreen2"
+                            app:cs_circle_stroke_width="7dp"
+                            app:cs_max="100"
+                            app:cs_move_outside_circle="true"
+                            app:cs_pointer_color="@color/colorGreen2"
+                            app:cs_pointer_halo_color="@color/white"
+                            app:cs_progress="70"
+                            app:cs_disable_pointer="true"
+                            app:cs_start_angle="-90"
+                            app:layout_constraintHorizontal_bias=".3"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_14sdp"
+                                    android:layout_height="@dimen/_14sdp"
+                                    android:layout_marginRight="@dimen/_3sdp"
+                                    app:srcCompat="@drawable/ic_footsteps_sharp"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/textConsumedSteppps"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="steps"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:textColor="@color/colorGreen2"
+                                    android:textSize="12sp"
+                                    app:layout_constraintVertical_chainStyle="spread" />
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvStepsConsumed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorGreen2"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textSize="16sp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                app:layout_constraintVertical_chainStyle="spread" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textTotalCalorieSteps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/10000"
+                                android:visibility="gone"
+                                android:textColor="@color/colorGreen2Light"
+                                android:textSize="16sp"
+                                app:layout_constraintVertical_chainStyle="spread" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/mcvCalories">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProtein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableTop="@drawable/ic_chicken_filled"
+                        android:text="Protein"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/roboto_regular"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@id/vDividerProtein"
+                        app:layout_constraintEnd_toEndOf="@id/vDividerProtein"
+                        app:layout_constraintStart_toStartOf="@id/vDividerProtein"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCarbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableTop="@drawable/ic_carbs"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Carbs"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        app:autoSizeMaxTextSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@id/vDividerCarbs"
+                        app:layout_constraintEnd_toEndOf="@id/vDividerCarbs"
+                        app:layout_constraintStart_toStartOf="@id/vDividerCarbs" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:drawableTop="@drawable/ic_fats"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Fats"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toTopOf="@id/vDividerFats"
+                        app:layout_constraintEnd_toEndOf="@id/vDividerFats"
+                        app:layout_constraintStart_toStartOf="@id/vDividerFats" />
+
+                    <View
+                        android:id="@+id/vDividerProtein"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/colorPink"
+                        app:layout_constraintBottom_toTopOf="@id/tvProteinGrms"
+                        app:layout_constraintEnd_toStartOf="@id/vDividerCarbs"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/vDividerCarbs"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/colorBlueTextLight"
+                        app:layout_constraintBottom_toTopOf="@id/tvProteinGrms"
+                        app:layout_constraintEnd_toStartOf="@id/vDividerFats"
+                        app:layout_constraintStart_toEndOf="@id/vDividerProtein" />
+
+                    <View
+                        android:id="@+id/vDividerFats"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/md_yellow"
+                        app:layout_constraintBottom_toTopOf="@id/tvProteinGrms"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vDividerCarbs" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProteinGrms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:maxLength="7"
+                        android:text="0 gm"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvCarbsGrms"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCarbsGrms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:maxLength="7"
+                        android:text="0 gm"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvFatsGrms"
+                        app:layout_constraintStart_toEndOf="@id/tvProteinGrms" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvFatsGrms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:maxLength="7"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="0 gm"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvCarbsGrms" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNutriaideData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

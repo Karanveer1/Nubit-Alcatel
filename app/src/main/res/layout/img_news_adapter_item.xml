@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_topNewsItems"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="5dp">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/img_top_news"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:src="@drawable/ajjtak"-->
+<!--        android:background="@drawable/rounded_imageview"-->
+<!--        android:clipToOutline="true"/>-->
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_top_news"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundedTopImage"/>
+
+    <LinearLayout
+        android:id="@+id/cont_title_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="7dp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#40000000"
+        android:paddingVertical="@dimen/_3sdp"
+        android:clipToPadding="true">
+
+        <TextView
+            android:id="@+id/txt_top_new_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:maxLines="2"
+            android:text="Breaking news"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_bold"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_top_new_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="This is some random news"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_top_new_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toLeftOf="@+id/img_top_news"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="27 Aug 2025"
+        android:paddingBottom="5dp"
+        android:textColor="@color/pop_up_text"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/txt_news_prov"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toLeftOf="@+id/img_top_news"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="NDTV"
+        android:paddingBottom="5dp"
+        android:textColor="@color/pop_up_text"
+        android:textSize="11sp" />
+
+<!--    <include-->
+<!--        android:id="@+id/layout_admob"-->
+<!--        layout="@layout/layout_admob_two"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

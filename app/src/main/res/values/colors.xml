@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_500">#ffffff</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -14,6 +14,13 @@
     <color name="primaryColor">#ff2d2d2d</color>
     <color name="secondaryColor">#ff3a3a3a</color>
     <color name="accentColor">#ff4286f4</color>
+
+    <color name="hint_white">#99FFFFFF</color>
+    <color name="hint_black">#66000000</color>
+    <color name="light_grey_stroke">#40FFFFFF</color>
+    <color name="delete_target_hover_tint">#FFC1C1C1</color>
+    <color name="uninstall_target_hover_tint">#FFF0592B</color>
+    <color name="transparent">#00000000</color>
 
     <color name="colorLime">#C3FD50</color>
     <color name="colorLimeDark">#05A646</color>

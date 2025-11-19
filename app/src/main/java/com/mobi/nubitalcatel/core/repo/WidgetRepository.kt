@@ -1,18 +1,17 @@
 package com.mobi.nubitalcatel.core.repo
 
-import com.mobi.nubitalcatel.core.models.Widget
 import com.mobi.nubitalcatel.core.models.WidgetOrder
 import com.mobi.nubitalcatel.core.network.ApiService
 
 class WidgetRepository(private val api: ApiService) {
 
-    suspend fun fetchWidgets(order: String): Result<List<WidgetOrder>> {
+    suspend fun fetchWidgets(): Result<List<WidgetOrder>> {
         return try {
-            val response = api.getWidgets(order)
-            if (response.success && response.data != null) {
-                Result.success(response.data)
+            val response = api.getData()
+            if (response.responseStatus) {
+                Result.success(response.responseObject)
             } else {
-                Result.failure(Exception(response.message ?: "Unknown error"))
+                Result.failure(Exception(response.responseMessage.ifEmpty { "Unknown error" }))
             }
         } catch (e: Exception) {
             Result.failure(e)

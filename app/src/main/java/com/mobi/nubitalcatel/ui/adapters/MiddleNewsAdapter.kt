@@ -41,51 +41,51 @@ class MiddleNewsAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: MiddleNewsPojo, position: Int) {
-            // Handle Ads
-            if (position == AD_POSITION) {
-                binding.frameAds.visibility = View.VISIBLE
-                binding.middleNewsLayout.visibility = View.GONE
-//                AdManager.showMediumRectangleAd(
-//                    context,
-//                    binding.frameAds,
-//                    item.adUnitId
-//                )
-                return
-            } else {
-                binding.frameAds.visibility = View.GONE
-                binding.middleNewsLayout.visibility = View.VISIBLE
-            }
-
-            // Image with Glide
-            Glide.with(binding.root.context)
-                .load(item.image)
-                .thumbnail(0.25f)
-                .placeholder(R.drawable.placeholder_apps)
-                .centerCrop()
-                .into(binding.imgMiddleNews)
-
-            // Texts
-            binding.txtMiddleNewsTitle.text = item.title
-            binding.txtMiddleNewsDes.text = item.description
-
-            // Date formatting
-            try {
-                val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
-                inputFormat.timeZone = TimeZone.getTimeZone("UTC")
-                val date = inputFormat.parse(item.postedDate)
-                val outputFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
-                binding.txtMiddleNewsDate.text = outputFormat.format(date!!)
-            } catch (e: Exception) {
-                binding.txtMiddleNewsDate.text = "${item.postedDate} ${item.postedTime}"
-            }
-
-            // Card + Image sizing
-//            binding.layoutCardveiw.layoutParams.width = MyUtility.NEWS_CONTAINER_WIDTH
-//            binding.imgMiddleNews.layoutParams = RelativeLayout.LayoutParams(
-//                ViewGroup.LayoutParams.MATCH_PARENT,
-//                (MyUtility.getScreenWidth(context) / 2.3).toInt()
-//            )
-//            binding.imgMiddleNews.scaleType = ImageView.ScaleType.FIT_XY
+//            // Handle Ads
+//            if (position == AD_POSITION) {
+//                binding.frameAds.visibility = View.VISIBLE
+//                binding.middleNewsLayout.visibility = View.GONE
+////                AdManager.showMediumRectangleAd(
+////                    context,
+////                    binding.frameAds,
+////                    item.adUnitId
+////                )
+//                return
+//            } else {
+//                binding.frameAds.visibility = View.GONE
+//                binding.middleNewsLayout.visibility = View.VISIBLE
+//            }
+//
+//            // Image with Glide
+//            Glide.with(binding.root.context)
+//                .load(item.image)
+//                .thumbnail(0.25f)
+//                .placeholder(R.drawable.placeholder_apps)
+//                .centerCrop()
+//                .into(binding.imgMiddleNews)
+//
+//            // Texts
+//            binding.txtMiddleNewsTitle.text = item.title
+//            binding.txtMiddleNewsDes.text = item.description
+//
+//            // Date formatting
+//            try {
+//                val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
+//                inputFormat.timeZone = TimeZone.getTimeZone("UTC")
+//                val date = inputFormat.parse(item.postedDate)
+//                val outputFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
+//                binding.txtMiddleNewsDate.text = outputFormat.format(date!!)
+//            } catch (e: Exception) {
+//                binding.txtMiddleNewsDate.text = "${item.postedDate} ${item.postedTime}"
+//            }
+//
+//            // Card + Image sizing
+////            binding.layoutCardveiw.layoutParams.width = MyUtility.NEWS_CONTAINER_WIDTH
+////            binding.imgMiddleNews.layoutParams = RelativeLayout.LayoutParams(
+////                ViewGroup.LayoutParams.MATCH_PARENT,
+////                (MyUtility.getScreenWidth(context) / 2.3).toInt()
+////            )
+////            binding.imgMiddleNews.scaleType = ImageView.ScaleType.FIT_XY
         }
     }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_topNewsItems"
+    android:layout_width="@dimen/_120sdp"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:layout_marginHorizontal="@dimen/_4sdp">
+
+    <LinearLayout
+        android:id="@+id/cont_title_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:background="@drawable/news_banner_bg"
+        android:paddingVertical="@dimen/_1sdp"
+        android:paddingRight="@dimen/_6sdp"
+        android:clipToPadding="true">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_top_news"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CustomRoundedCorners"/>
+
+        <TextView
+            android:id="@+id/txt_top_new_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="2"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_6sdp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:text=""/>
+
+    </LinearLayout>
+
+<!--    <include-->
+<!--        android:id="@+id/layout_admob"-->
+<!--        layout="@layout/layout_admob_two"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content" />-->
+
+</RelativeLayout>

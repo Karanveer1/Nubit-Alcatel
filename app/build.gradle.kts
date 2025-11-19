@@ -76,6 +76,10 @@ dependencies {
     implementation(libs.exoplayer.core)
     implementation(libs.exoplayer.hls)
     implementation(libs.glide)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.shimmer)
+    implementation("me.tankery.lib:circularSeekBar:1.4.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

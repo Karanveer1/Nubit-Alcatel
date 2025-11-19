@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_topNewsItems"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_2sdp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    app:elevation="0dp"
+    android:outlineProvider="none"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="@dimen/_4sdp"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/cont_title_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/img_top_news"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_top_new_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:maxLines="3"
+                    android:text="News title one for testing purpose onlyfor testing purpose only"
+                    android:textColor="@color/light_black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/txt_top_new_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="3dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlueTextLight"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+                    android:textSize="11sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivNewsBy"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txt_top_new_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@+id/img_top_news"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_regular"
+                        android:maxLines="1"
+                        android:text="10 Jan 2025"
+                        android:textColor="@color/black"
+                        android:textSize="9sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_news_prov"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toLeftOf="@+id/img_top_news"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:textColor="@color/pop_up_text"
+                android:textSize="11sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_top_news"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="1dp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundedImageStyle"/>
+
+        </RelativeLayout>
+
+<!--        <com.google.android.gms.ads.AdView-->
+<!--            android:id="@+id/adView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_80sdp"-->
+<!--            app:adSize="BANNER"-->
+<!--            android:visibility="gone"-->
+<!--            app:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
+
+        <FrameLayout
+            android:id="@+id/frameAds"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:minHeight="@dimen/_60sdp"/>
+
+        <LinearLayout
+            android:id="@+id/dividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_news"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@color/md_trans_grey"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

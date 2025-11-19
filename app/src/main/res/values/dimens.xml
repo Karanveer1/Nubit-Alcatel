@@ -26,6 +26,7 @@
     <dimen name="ref_btn_padding">5dp</dimen>
     <dimen name="ref_btn_size">30dp</dimen>
     <dimen name="txt_poweredby">10sp</dimen>
+    <dimen name="card_gap">8dp</dimen>
     <dimen name="heading_margin_top">12dp</dimen>
     <dimen name="heading_margin_bottom">5dp</dimen>
     <dimen name="heading_margin_card">10dp</dimen>

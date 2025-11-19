@@ -3,9 +3,9 @@ package com.mobi.nubitalcatel.utils
 data class NubitConfig internal constructor(
     val partnerId: String,
     val apiKey: String,
-    val enableLogging: Boolean,
-    val defaultLocale: String,
-    val customThemeRes: Int?
+    val enableLogging: Boolean = false,
+    val defaultLocale: String = "en",
+    val customThemeRes: Int? = 1
 ) {
     class Builder(private val partnerId: String, private val apiKey: String) {
         private var enableLogging: Boolean = false

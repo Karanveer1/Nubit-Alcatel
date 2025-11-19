@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bottom_sheet_bg">
+
+    <ImageView
+        android:id="@+id/ivCross"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_gravity="end"
+        android:padding="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_close"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_one"
+        app:shapeAppearanceOverlay="@style/RoundedImageStyle"/>
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Title goes here"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Description text goes here..."
+        android:textSize="13sp"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/btnTitle"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Explore"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:background="@drawable/rounded_btn_bg" />
+
+</LinearLayout>

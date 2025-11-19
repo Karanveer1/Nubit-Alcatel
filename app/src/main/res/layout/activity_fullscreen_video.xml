@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000">
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/fullscreen_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="true"
+        app:resize_mode="fit" />
+
+    <ImageView
+        android:id="@+id/btn_exit_fullscreen"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white" />
+
+</RelativeLayout>
